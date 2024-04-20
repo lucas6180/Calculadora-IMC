@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+.barra-topo-site{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 12.5vh;
+    padding: 0 2%;
+    background-color: rgb(17, 112, 255);
+    position: fixed;
+    z-index: 2;
+}
+.titulo-site{
+    margin-right: auto;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px 0px rgb(77, 77, 77);
+}
+
+header a{
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.548);
+}
+header a:hover{
+    color: rgb(255, 255, 255); 
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.interface{
+    max-width: 1500px;
+}
+header > .interface{
+    display: flex;
+    justify-content: space-between;
+}
+#logo-site{
+   filter: drop-shadow(0px 0px 4px rgb(0, 102, 255)); 
+   animation: flutuar 1.5s ease-in-out infinite alternate;
+}
+@keyframes flutuar{
+    0%{
+
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.interface .flex{
+    display: flex;
+    align-items: center;
+    padding: 80px 4%;
+    gap: 90px;
+
+}
+
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+header .topo-site{
+    display: flex;
+    align-items: center;
+    height:80px;
+    width: 100%;
+    background-color: rgb(0, 90, 192);
+}
+.conteudo-texto-topo{
+    color: rgb(0, 0, 0); 
+}
+.img-topo-site{
+    width: 100%; 
+    max-width: 600px;
+    max-height: 400px;
+    filter: drop-shadow(0px 0px 8px rgb(0, 102, 255)); 
+}
+.conteudo-texto-topo h1{
+    text-align: center;
+    font-size: 34px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: rgb(0, 153, 255);
+}
+
+.conteudo-calculadora{
+    width: 930px;
+    height: 75vh;
+    max-height: 500px;
+    box-shadow: 0px 0px 0px 0.2px black,
+    0px 0px 6px 1px rgb(0, 183, 255);
+   border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.meio-site{
+    display: flex;
+    justify-content: center;
+}
+#calculadora{
+    width: 65vh;
+    height: 75vh;
+    max-width: 400px;
+    max-height: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#calculadora #altura-usuario, #peso-usuario, #idade-usuario{
+    width: 70%;
+    height: 11%;
+    outline: 0;
+    border: 0;
+    border-bottom: solid 1px rgb(209, 209, 209); 
+    background-color: transparent;
+}
+
+
+
+#calculadora button{
+    height: 10%;
+    width: 80%;
+    min-width: 80px;
+    border-radius: 8px;
+    outline: 0;
+    border: solid 1px;
+    top: 3%;
+    font-size: 18px;
+    position: relative;
+    background-color:  rgb(1, 161, 224);
+    color: white;
+    font-weight: 550;
+}
+.escolha-genero{
+    width: 260px;
+    display: flex;
+    position: relative;
+    top: 2%;
+    margin-right: auto;
+    padding-left: 14%;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#label-feminino{
+    position: relative;
+   
+}
+#label-masculino{
+    position: relative;
+   
+}
+.label-instrucao{
+    position: relative;
+    top: 3%;
+    right: 32.5%;
+    width: 20px;
+
+}
+.titulo-calculadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 183, 255);
+    height: 10vh;
+    max-height: 65px;
+    width: 100%;
+    border-top-left-radius: 5px;
+}
+.resultado{
+    width: 85vh;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    border-left: solid rgb(214, 214, 214);
+    border-width: 0.5px;
+    flex-direction: column;
+    
+}
+.titulo-resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 183, 255);
+    height: 10vh;
+    max-height: 65px;
+    min-height: 65px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+.titulo-calculadora h1{
+    color: white
+}
+.resultado h1{
+    color: white
+}
+button{
+    cursor: pointer;
+}
+#imc{
+    margin-top: 4%;
+    font-size: 25px;
+    color: rgb(0, 153, 255);
+    font-weight: 550;
+}
+
+#text-resultado{
+    margin: 5% 5%;
+    font-size: 15px;
+   
+}
+    
+#status-peso{
+    top: 20px;
+    font-size: 25px;
+    color: rgb(0, 153, 255);
+    font-weight: 550;
+    padding-right: 54%;
+    position: relative;
+}
+webkit-input-placeholder{
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: 550;
+    color: rgb(180, 180, 180);
+}
+
+.conteudo-inferior .flex{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px;
+    gap: 15px;
+}
+
+.conteudo-inferior h1{
+    text-align: center;
+    color: rgb(0, 153, 255);
+    margin-bottom: 2%;
+}
+.conteudo-inferior h2{
+    color: rgb(0, 153, 255);
+    font-size: 22px;
+}
+strong{
+    color: rgb(0, 153, 255);
+}
+/* RESPOSIVIDADE PARA TABLETS/IPADS */
+@media screen and (min-width: 700px) and (max-width: 1020px) {
+    body{
+        padding-top: 3.9%;
+    } 
+    .flex{
+        padding: 150px 6%;
+        flex-direction: column;
+    }
+    .barra-topo-site{
+        width: 100%;
+        height: 7%;
+        padding: 0 2%;
+    }
+    #logo-site{
+        position: relative;
+        top: 0.6vw;
+        width: 85%; 
+        max-width: 70px;
+        max-height: 60px;
+     } 
+    .titulo-site{
+    font-size: 22px;
+
+    }
+    .conteudo-texto-topo h1{
+        font-size: 23px;   
+    }
+    .img-topo-site{
+        width: 100%; 
+        max-width: 400px;
+        max-height: 400px;
+    }
+    header nav ul{
+        display: none;
+    }
+    .conteudo-calculadora{
+        width: 90%;
+        height: 55vw;
+        max-height: 580px;
+        border: solid;
+    }
+    #calculadora{
+        width: 100%;
+        height: 45vh;
+        max-width: 400px;
+        max-height: 480px;
+        gap: 0.7vw;
+    }
+    #calculadora button{
+    height: 10%;
+    width: 80%;
+}
+.resultado{
+    width: 100%;
+    height: 45vh;
+    max-height: 419px;
+    border-left: solid rgb(214, 214, 214);
+    flex-direction: column;
+}
+#imc{
+    font-size: 23px;
+}
+#status-peso{
+    font-size: 17px;
+    padding-left: 5%;
+    margin-right: auto;
+}
+#text-resultado{
+    font-size: 12.88px;
+   
+}
+
+}
+
+/* RESPONSIVIDADE CELULARES */
+@media screen and (max-width: 699px){
+    body{
+        padding-top: 26px;
+        padding-bottom: 500px;
+    } 
+    .interface .flex{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 80px 8%;
+        gap: 90px;
+    
+    }
+    .barra-topo-site{
+        width: 100%;
+        height: 55px;
+        padding: 0 2%;
+    }
+    #logo-site{
+        position: relative;
+        top: 0.6vw;
+        height: 11vw; 
+        max-height: 58px;
+     } 
+    .titulo-site{
+    font-size: 20px;
+
+    }
+    .conteudo-texto-topo h1{
+        font-size: 20px; 
+    }
+    .img-topo-site{
+        width: 100%; 
+        max-width: 300px;
+        max-height: 300px;
+    }
+    header nav ul{
+        display: none;
+    }
+    .conteudo-calculadora{
+        width: 85%;
+        height: 140vh;
+        max-height: none;
+        flex-direction: column;
+        min-height: 580px;
+    }
+    #calculadora{
+        width: 100%;
+        height: 110vh;
+        max-height: 580px;
+    }
+    #calculadora button{
+    position: relative;
+    top: 5%;
+}
+.escolha-genero{
+    width: 250px;
+    display: flex;
+    position: relative;
+    top: 2%;
+    right: 3%;
+    justify-content: center;
+    justify-content: space-around;
+}
+.resultado{
+    width: 100%;
+    height: 100vh;
+}
+
+#imc{
+    font-size: 23px;
+}
+#status-peso{
+    top: 16px;
+    font-size: 20px;
+    padding-right: 42%;
+}
+#text-resultado{
+    font-size: 12.88px;  
+}
+.titulo-resultado{
+    border-top: solid rgba(0, 0, 0, 0.486);
+}
+
+.conteudo-inferior h2{
+    color: rgb(0, 153, 255);
+    font-size: 20px;
+}
+}
+    
