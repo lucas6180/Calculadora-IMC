@@ -2,13 +2,90 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 body{
     background-color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     padding-top: 40px;
 }
+.dark{
+    background-color: rgb(40, 40, 40);
+}
+body.dark p, body.dark label, body.dark input {
+    color: white;
+}
+
+#menu-mobile nav a{
+    color: white;
+    font-size: 15px;
+    padding: 20px 30px;
+    display: block;
+    text-decoration: none;
+}
+/* Menu Mobile */
+#menu-mobile{
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+}
+#menu-mobile ul a{
+    color: white;
+    display: block;
+    padding: 20px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    
+}
+#menu-mobile a:hover{
+    background-color: rgb(29, 29, 29);
+}
+.linha{
+    width: 30px;
+    height: 5px;
+    display: block;
+    position: relative;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 5px auto;
+    transform-origin: center;
+    transition: .2s;
+    filter: drop-shadow(0 0 2px rgb(255, 19, 19));
+}
+.btn-mob{
+    display: none;
+}
+#btn-menu-mobile{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    outline: hidden;
+    border: 0;
+    cursor: pointer;
+}
+
+#btn-menu-mobile.ativar .linha:nth-child(1){
+    transform:  translateY(8px) rotate(-45deg);
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 2px rgb(255, 19, 19));
+}
+#btn-menu-mobile.ativar .linha:nth-child(3){
+    transform: translateY(-8px)rotate(45deg);
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 2px rgb(255, 19, 19));
+}
+#btn-menu-mobile.ativar .linha:nth-child(2){
+    width: 0;
+}
+/* ----------------------------------------------- */
 .barra-topo-site{
     display: flex;
     align-items: center;
@@ -26,6 +103,24 @@ body{
     color: rgb(255, 255, 255);
     text-shadow: 0px 4px 0px rgb(77, 77, 77);
 }
+.img-sol{
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+    background-image: url(/assets/icons8-sun-50.png);
+    background-size: cover;
+}
+.img-lua{
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    background-image: url(/assets/icons8-lua-brilhante-50.png);
+    background-size: cover;
+}
+
 
 header a{
     text-decoration: none;
@@ -47,10 +142,7 @@ header > .interface{
 .interface{
     max-width: 1500px;
 }
-header > .interface{
-    display: flex;
-    justify-content: space-between;
-}
+
 #logo-site{
    filter: drop-shadow(0px 0px 4px rgb(0, 102, 255)); 
    animation: flutuar 1.5s ease-in-out infinite alternate;
@@ -85,9 +177,7 @@ header .topo-site{
     width: 100%;
     background-color: rgb(0, 90, 192);
 }
-.conteudo-texto-topo{
-    color: rgb(0, 0, 0); 
-}
+
 .img-topo-site{
     width: 100%; 
     max-width: 600px;
@@ -192,10 +282,10 @@ header .topo-site{
     width: 85vh;
     height: 75vh;
     display: flex;
-    align-items: center;
     border-left: solid rgb(214, 214, 214);
     border-width: 0.5px;
     flex-direction: column;
+    gap: 15px;
     
 }
 .titulo-resultado{
@@ -203,9 +293,7 @@ header .topo-site{
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 183, 255);
-    height: 10vh;
-    max-height: 65px;
-    min-height: 65px;
+    height: 65px;
     border-top-right-radius: 5px;
     width: 100%;
 }
@@ -219,25 +307,26 @@ button{
     cursor: pointer;
 }
 #imc{
-    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 25px;
     color: rgb(0, 153, 255);
     font-weight: 550;
 }
 
 #text-resultado{
-    margin: 5% 5%;
     font-size: 15px;
-   
+    padding: 0 4%;
 }
-    
+.status{
+    padding-left: 4%;
+}
 #status-peso{
-    top: 20px;
     font-size: 25px;
     color: rgb(0, 153, 255);
     font-weight: 550;
-    padding-right: 54%;
     position: relative;
+
 }
 webkit-input-placeholder{
     font-size: 15px;
@@ -265,8 +354,14 @@ webkit-input-placeholder{
 strong{
     color: rgb(0, 153, 255);
 }
+.refazer{
+
+}
 /* RESPOSIVIDADE PARA TABLETS/IPADS */
 @media screen and (min-width: 700px) and (max-width: 1020px) {
+    .btn-mob{
+        display: flex;
+    }
     body{
         padding-top: 3.9%;
     } 
@@ -339,6 +434,9 @@ strong{
 }
 
 }
+.conteudo-inferior .flex{
+    padding: 90px 4%;
+}
 
 /* RESPONSIVIDADE CELULARES */
 @media screen and (max-width: 699px){
@@ -346,6 +444,9 @@ strong{
         padding-top: 26px;
         padding-bottom: 500px;
     } 
+    .btn-mob{
+        display: flex;
+    }
     .interface .flex{
         display: flex;
         align-items: center;
@@ -356,17 +457,18 @@ strong{
     }
     .barra-topo-site{
         width: 100%;
-        height: 55px;
-        padding: 0 2%;
+        height: 70px;
+        padding-top: 20px;
     }
     #logo-site{
         position: relative;
         top: 0.6vw;
         height: 11vw; 
         max-height: 58px;
+
      } 
     .titulo-site{
-    font-size: 20px;
+        font-size: 20px;
 
     }
     .conteudo-texto-topo h1{
@@ -381,19 +483,26 @@ strong{
         display: none;
     }
     .conteudo-calculadora{
+        justify-content: start;
+        gap: 10px;
         width: 85%;
-        height: 140vh;
+        height: 100%;
         max-height: none;
         flex-direction: column;
-        min-height: 580px;
+        min-height: 430px;
+    }
+    .titulo-calculadora h1{
+        font-size: 20px;
     }
     #calculadora{
         width: 100%;
-        height: 110vh;
+        height: 100%;
+        gap: 20px;
         max-height: 580px;
     }
     #calculadora button{
     position: relative;
+    min-height: 38px;
     top: 5%;
 }
 .escolha-genero{
@@ -407,16 +516,30 @@ strong{
 }
 .resultado{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    align-items: start;
+    gap: 15px;
 }
-
+.sumir{
+    display: none;
+}
+.texto-resultado{
+    padding: 4%;
+    display: flex;    
+}
 #imc{
+    margin: auto;
     font-size: 23px;
 }
+.status{
+    display: flex;
+    justify-content: center;
+    padding-left: 7%;
+}
 #status-peso{
-    top: 16px;
+    top: 0;
     font-size: 20px;
-    padding-right: 42%;
+    margin-right: auto;
 }
 #text-resultado{
     font-size: 12.88px;  
@@ -429,5 +552,7 @@ strong{
     color: rgb(0, 153, 255);
     font-size: 20px;
 }
+.conteudo-inferior{
+    padding: 90px 4%;
 }
-    
+}

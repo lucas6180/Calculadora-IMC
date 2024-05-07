@@ -6,8 +6,34 @@
 body{
     background-color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     padding-top: 40px;
+}
+.dark{
+    background-color: rgb(40, 40, 40);
+}
+body.dark p, body.dark label, body.dark input {
+    color: white;
+}
+button{
+    cursor: pointer;
+}.img-sol{
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    background-image: url(/assets/icons8-sun-50.png);
+    background-size: cover;
+}
+.img-lua{
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    background-image: url(/assets/icons8-lua-brilhante-50.png);
+    background-size: cover;
 }
 .barra-topo-site{
     display: flex;
@@ -20,6 +46,7 @@ body{
     position: fixed;
     z-index: 2;
 }
+
 .titulo-site{
     margin-right: auto;
     font-size: 28px;

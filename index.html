@@ -27,12 +27,27 @@
                     </a>
                 </div>
                 <h1 class="titulo-site">My Calculator</h1>
+                <button id="btn-tema" class="img-lua"></button>
                 <nav class="menu-desktop">
                     <ul>
                         <li><a href="index.html">Início</a></li>
                         <li><a href="SRC/sobre.html">Sobre</a></li>
                         <li><a href="http://127.0.0.1:5500/SRC/contato.html">Contato</a></li>
                     </ul>
+                </nav>
+
+                <div class="btn-mob">
+                    <button id="btn-menu-mobile">
+                        <span class="linha"></span>
+                        <span class="linha"></span>
+                        <span class="linha"></span>
+                    </button>
+                </div>
+
+                <nav id="menu-mobile">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="SRC/sobre.html">Sobre</a></li>
+                    <li><a href="SRC/contato.html">Contato</a></li>
                 </nav>
             </div>
         </div>
@@ -93,37 +108,51 @@
                     <input id="idade-usuario" type="number" placeholder="Insira sua idade">
                     <button id="botao">Calcular</button>
                 </div>
-                <div class="resultado">
+                <div class="resultado sumir">
                     <div class="titulo-resultado">
                         <h1>Seu IMC</h1>
                     </div>
                     <h1 id="imc"></h1>
-                    <h2 id="status-peso"></h2>
-                    <p id="text-resultado"></p>
+                    <div class="status">
+
+                        <h2 id="status-peso"></h2>
+                    </div>
+
+                    <div class="texto-resultado">
+                        <p id="text-resultado"></p>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="conteudo-inferior">
             <div class="flex">
                 <h1>Mitos e Verdades sobre o IMC</h1>
-                <p>O Índice de Massa Corporal (IMC) é uma ferramenta amplamente utilizada para avaliar o peso <br> corporal
+                <p>O Índice de Massa Corporal (IMC) é uma ferramenta amplamente utilizada para avaliar o peso <br>
+                    corporal
                     em relação à altura. No entanto, existem muitos mitos e verdades que circulam sobre o IMC. <br>Vamos
                     esclarecer alguns deles</p>
                 <h2>Mitos mais ditos:</h2>
                 <p>"O IMC não é preciso porque não leva em conta a composição corporal."<br>
                     <br>
-                    <strong>Verdade:</strong> O IMC é uma medida simplificada e não leva em conta a composição corporal, como <br>músculos e
-                    gordura. Por isso, é importante considerar outros fatores, como percentual de gordura <br> e distribuição
-                    de peso.</p>
+                    <strong>Verdade:</strong> O IMC é uma medida simplificada e não leva em conta a composição corporal,
+                    como <br>músculos e
+                    gordura. Por isso, é importante considerar outros fatores, como percentual de gordura <br> e
+                    distribuição
+                    de peso.
+                </p>
                 <p>"Um IMC alto sempre significa que a pessoa é obesa." <br>
                     <br>
-                    <strong>Verdade:</strong> Um IMC alto pode indicar obesidade, mas também pode ser resultado de maior massa <br>muscular
-                    em atletas ou pessoas muito musculosas.</p>
+                    <strong>Verdade:</strong> Um IMC alto pode indicar obesidade, mas também pode ser resultado de maior
+                    massa <br>muscular
+                    em atletas ou pessoas muito musculosas.
+                </p>
                 <p>"O IMC é válido para todas as idades e etnias."<br>
                     <br>
 
-                    <strong>Verdade:</strong> O IMC é uma ferramenta útil para a maioria das pessoas adultas, mas pode não ser <br>adequado
-                    para idosos, crianças, adolescentes e diferentes grupos étnicos.</p>
+                    <strong>Verdade:</strong> O IMC é uma ferramenta útil para a maioria das pessoas adultas, mas pode
+                    não ser <br>adequado
+                    para idosos, crianças, adolescentes e diferentes grupos étnicos.
+                </p>
             </div>
         </section>
     </main>
