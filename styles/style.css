@@ -107,7 +107,7 @@ body.dark input {
   height: 30px;
   background: transparent;
   border: 0;
-  background-image: url(/assets/icons8-sun-50.png);
+  background-image: url(/assets/sol.png);
   background-size: cover;
 }
 .img-lua {
@@ -116,7 +116,7 @@ body.dark input {
   background: transparent;
   outline: 0;
   border: 0;
-  background-image: url(/assets/icons8-lua-brilhante-50.png);
+  background-image: url(/assets/lua.png);
   background-size: cover;
 }
 
