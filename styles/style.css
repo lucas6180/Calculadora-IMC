@@ -1,511 +1,500 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 5%;
+  padding-top: 40px;
+}
+.dark {
+  background-color: rgb(40, 40, 40);
+}
+body.dark p,
+body.dark label,
+body.dark input {
+  color: white;
+}
 
-}
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: "Poppins", sans-serif;
-    padding-bottom: 5%;
-    padding-top: 40px;
-}
-.dark{
-    background-color: rgb(40, 40, 40);
-}
-body.dark p, body.dark label, body.dark input {
-    color: white;
-}
-
-#menu-mobile nav a{
-    color: white;
-    font-size: 15px;
-    padding: 20px 30px;
-    display: block;
-    text-decoration: none;
-}
 /* Menu Mobile */
-#menu-mobile{
-    background-color: rgb(20, 20, 20);
-    position: absolute;
-    top: 77px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(10px);
-    visibility: hidden;
+#menu-mobile li{
+  color: white;
+  display: block;
+  text-decoration: none;
 }
-#menu-mobile ul a{
-    color: white;
-    display: block;
-    padding: 20px 30px;
-    font-size: 18px;
-    text-decoration: none;
-    
+#menu-mobile a{
+    font-size: 20px;
+    padding: 18px 0;
 }
-#menu-mobile a:hover{
-    background-color: rgb(29, 29, 29);
-}
-.linha{
-    width: 30px;
-    height: 5px;
-    display: block;
-    position: relative;
-    height: 3px;
-    background-color: white;
-    display: block;
-    margin: 5px auto;
-    transform-origin: center;
-    transition: .2s;
-    filter: drop-shadow(0 0 2px rgb(255, 19, 19));
-}
-.btn-mob{
-    display: none;
-}
-#btn-menu-mobile{
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    outline: hidden;
-    border: 0;
-    cursor: pointer;
+#menu-mobile {
+  background-color: rgb(17, 112, 255);
+  position: absolute;
+  padding: 25px 20px;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  visibility: hidden;
 }
 
-#btn-menu-mobile.ativar .linha:nth-child(1){
-    transform:  translateY(8px) rotate(-45deg);
-    background-color: rgb(255, 255, 255);
-    filter: drop-shadow(0 0 2px rgb(255, 19, 19));
+
+#menu-mobile a:hover {
+  background-color: rgb(29, 29, 29);
 }
-#btn-menu-mobile.ativar .linha:nth-child(3){
-    transform: translateY(-8px)rotate(45deg);
-    background-color: rgb(255, 255, 255);
-    filter: drop-shadow(0 0 2px rgb(255, 19, 19));
+.linha {
+  width: 30px;
+  height: 5px;
+  display: block;
+  position: relative;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin: 5px auto;
+  transform-origin: center;
+  transition: 0.2s;
+  filter: drop-shadow(0 0 3px rgb(0, 132, 255))
 }
-#btn-menu-mobile.ativar .linha:nth-child(2){
-    width: 0;
+.btn-mob {
+  display: none;
 }
+#btn-menu-mobile {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  outline: hidden;
+  border: 0;
+  cursor: pointer;
+}
+
+#btn-menu-mobile.ativar .linha:nth-child(1) {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(0 0 2px rgb(0, 132, 255));
+}
+#btn-menu-mobile.ativar .linha:nth-child(3) {
+  transform: translateY(-8px) rotate(45deg);
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(0 0 2px rgb(0, 132, 255));
+}
+#btn-menu-mobile.ativar .linha:nth-child(2) {
+  width: 0;
+}
+
 /* ----------------------------------------------- */
-.barra-topo-site{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 12.5vh;
-    padding: 0 2%;
-    background-color: rgb(17, 112, 255);
-    position: fixed;
-    z-index: 2;
+.barra-topo-site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 12.5vh;
+  padding: 0 2%;
+  background-color: rgb(17, 112, 255);
+  position: fixed;
+  z-index: 2;
 }
-.titulo-site{
-    margin-right: auto;
-    font-size: 28px;
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 4px 0px rgb(77, 77, 77);
+.titulo-site {
+  margin-right: auto;
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 4px 0px rgb(77, 77, 77);
 }
-.img-sol{
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: 0;
-    background-image: url(/assets/icons8-sun-50.png);
-    background-size: cover;
+.img-sol {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 0;
+  background-image: url(/assets/icons8-sun-50.png);
+  background-size: cover;
 }
-.img-lua{
-    width: 35px;
-    height: 35px;
-    background: transparent;
-    outline: 0;
-    border: 0;
-    background-image: url(/assets/icons8-lua-brilhante-50.png);
-    background-size: cover;
-}
-
-
-header a{
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.548);
-}
-header a:hover{
-    color: rgb(255, 255, 255); 
-    transform: scale(1.05);
-    text-decoration: underline;
-}
-header > .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.interface{
-    max-width: 1500px;
+.img-lua {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  background-image: url(/assets/icons8-lua-brilhante-50.png);
+  background-size: cover;
 }
 
-#logo-site{
-   filter: drop-shadow(0px 0px 4px rgb(0, 102, 255)); 
-   animation: flutuar 1.5s ease-in-out infinite alternate;
+header a {
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.548);
 }
-@keyframes flutuar{
-    0%{
-
-    }
-    100%{
-        transform: translateY(-5px);
-    }
+header a:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+  text-decoration: underline;
 }
-.interface .flex{
-    display: flex;
-    align-items: center;
-    padding: 80px 4%;
-    gap: 90px;
-
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-header nav ul{
-    list-style-type: none;
-}
-header nav ul li{
-    display: inline-block;
-    padding: 0 40px;
-}
-header .topo-site{
-    display: flex;
-    align-items: center;
-    height:80px;
-    width: 100%;
-    background-color: rgb(0, 90, 192);
+.interface {
+  max-width: 1500px;
 }
 
-.img-topo-site{
-    width: 100%; 
-    max-width: 600px;
-    max-height: 400px;
-    filter: drop-shadow(0px 0px 8px rgb(0, 102, 255)); 
+#logo-site {
+  filter: drop-shadow(0px 0px 4px rgb(0, 102, 255));
+  animation: flutuar 1.5s ease-in-out infinite alternate;
 }
-.conteudo-texto-topo h1{
-    text-align: center;
-    font-size: 34px;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    color: rgb(0, 153, 255);
+@keyframes flutuar {
+  0% {
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
-
-.conteudo-calculadora{
-    width: 930px;
-    height: 75vh;
-    max-height: 500px;
-    box-shadow: 0px 0px 0px 0.2px black,
-    0px 0px 6px 1px rgb(0, 183, 255);
-   border-radius: 5px;
-    display: flex;
-    justify-content: center;
-}
-.meio-site{
-    display: flex;
-    justify-content: center;
-}
-#calculadora{
-    width: 65vh;
-    height: 75vh;
-    max-width: 400px;
-    max-height: 480px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+.interface .flex {
+  display: flex;
+  align-items: center;
+  padding: 80px 4%;
+  gap: 90px;
 }
 
-#calculadora #altura-usuario, #peso-usuario, #idade-usuario{
-    width: 70%;
-    height: 11%;
-    outline: 0;
-    border: 0;
-    border-bottom: solid 1px rgb(209, 209, 209); 
-    background-color: transparent;
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+header .topo-site {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(0, 90, 192);
 }
 
-
-
-#calculadora button{
-    height: 10%;
-    width: 80%;
-    min-width: 80px;
-    border-radius: 8px;
-    outline: 0;
-    border: solid 1px;
-    top: 3%;
-    font-size: 18px;
-    position: relative;
-    background-color:  rgb(1, 161, 224);
-    color: white;
-    font-weight: 550;
+.img-topo-site {
+  width: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  filter: drop-shadow(0px 0px 8px rgb(0, 102, 255));
 }
-.escolha-genero{
-    width: 260px;
-    display: flex;
-    position: relative;
-    top: 2%;
-    margin-right: auto;
-    padding-left: 14%;
-    justify-content: center;
-    justify-content: space-around;
+.conteudo-texto-topo h1 {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  color: rgb(0, 153, 255);
 }
 
-#label-feminino{
-    position: relative;
-   
+.conteudo-calculadora {
+  width: 930px;
+  height: 75vh;
+  max-height: 500px;
+  box-shadow: 0px 0px 0px 0.2px black, 0px 0px 6px 1px rgb(0, 183, 255);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
-#label-masculino{
-    position: relative;
-   
+.meio-site {
+  display: flex;
+  justify-content: center;
 }
-.label-instrucao{
-    position: relative;
-    top: 3%;
-    right: 32.5%;
-    width: 20px;
-
-}
-.titulo-calculadora{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 183, 255);
-    height: 10vh;
-    max-height: 65px;
-    width: 100%;
-    border-top-left-radius: 5px;
-}
-.resultado{
-    width: 85vh;
-    height: 75vh;
-    display: flex;
-    border-left: solid rgb(214, 214, 214);
-    border-width: 0.5px;
-    flex-direction: column;
-    gap: 15px;
-    
-}
-.titulo-resultado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 183, 255);
-    height: 65px;
-    border-top-right-radius: 5px;
-    width: 100%;
-}
-.titulo-calculadora h1{
-    color: white
-}
-.resultado h1{
-    color: white
-}
-button{
-    cursor: pointer;
-}
-#imc{
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 25px;
-    color: rgb(0, 153, 255);
-    font-weight: 550;
+#calculadora {
+  width: 65vh;
+  height: 75vh;
+  max-width: 400px;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
-#text-resultado{
-    font-size: 15px;
-    padding: 0 4%;
-}
-.status{
-    padding-left: 4%;
-}
-#status-peso{
-    font-size: 25px;
-    color: rgb(0, 153, 255);
-    font-weight: 550;
-    position: relative;
-
-}
-webkit-input-placeholder{
-    font-size: 15px;
-    font-family: monospace;
-    font-weight: 550;
-    color: rgb(180, 180, 180);
+#calculadora #altura-usuario,
+#peso-usuario,
+#idade-usuario {
+  width: 70%;
+  height: 11%;
+  outline: 0;
+  border: 0;
+  border-bottom: solid 1px rgb(209, 209, 209);
+  background-color: transparent;
 }
 
-.conteudo-inferior .flex{
-    display: flex;
-    flex-direction: column;
-    padding: 100px 30px;
-    gap: 15px;
+#calculadora button {
+  height: 10%;
+  width: 80%;
+  min-width: 80px;
+  border-radius: 8px;
+  outline: 0;
+  border: solid 1px;
+  top: 3%;
+  font-size: 18px;
+  position: relative;
+  background-color: rgb(1, 161, 224);
+  color: white;
+  font-weight: 550;
+}
+.escolha-genero {
+  width: 260px;
+  display: flex;
+  position: relative;
+  top: 2%;
+  margin-right: auto;
+  padding-left: 14%;
+  justify-content: center;
+  justify-content: space-around;
 }
 
-.conteudo-inferior h1{
-    text-align: center;
-    color: rgb(0, 153, 255);
-    margin-bottom: 2%;
+#label-feminino {
+  position: relative;
 }
-.conteudo-inferior h2{
-    color: rgb(0, 153, 255);
-    font-size: 22px;
+#label-masculino {
+  position: relative;
 }
-strong{
-    color: rgb(0, 153, 255);
+.label-instrucao {
+  position: relative;
+  top: 3%;
+  right: 32.5%;
+  width: 20px;
 }
-.refazer{
+.titulo-calculadora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 183, 255);
+  height: 10vh;
+  max-height: 65px;
+  width: 100%;
+  border-top-left-radius: 5px;
+}
+.resultado {
+  width: 85vh;
+  height: 75vh;
+  display: flex;
+  border-left: solid rgb(214, 214, 214);
+  border-width: 0.5px;
+  flex-direction: column;
+  gap: 15px;
+}
+.titulo-resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 183, 255);
+  height: 65px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+.titulo-calculadora h1 {
+  color: white;
+}
+.resultado h1 {
+  color: white;
+}
+button {
+  cursor: pointer;
+}
+#imc {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  color: rgb(0, 153, 255);
+  font-weight: 550;
+}
 
+#text-resultado {
+  font-size: 15px;
+  padding: 0 4%;
+}
+.status {
+  padding-left: 4%;
+}
+#status-peso {
+  font-size: 25px;
+  color: rgb(0, 153, 255);
+  font-weight: 550;
+  position: relative;
+}
+webkit-input-placeholder {
+  font-size: 15px;
+  font-family: monospace;
+  font-weight: 550;
+  color: rgb(180, 180, 180);
+}
+
+.conteudo-inferior .flex {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 30px;
+  gap: 15px;
+}
+
+.conteudo-inferior h1 {
+  text-align: center;
+  color: rgb(0, 153, 255);
+  margin-bottom: 2%;
+}
+.conteudo-inferior h2 {
+  color: rgb(0, 153, 255);
+  font-size: 22px;
+}
+strong {
+  color: rgb(0, 153, 255);
+}
+.refazer {
 }
 /* RESPOSIVIDADE PARA TABLETS/IPADS */
 @media screen and (min-width: 700px) and (max-width: 1020px) {
-    .btn-mob{
-        display: flex;
-    }
-    body{
-        padding-top: 3.9%;
-    } 
-    .flex{
-        padding: 150px 6%;
-        flex-direction: column;
-    }
-    .barra-topo-site{
-        width: 100%;
-        height: 7%;
-        padding: 0 2%;
-    }
-    #logo-site{
-        position: relative;
-        top: 0.6vw;
-        width: 85%; 
-        max-width: 70px;
-        max-height: 60px;
-     } 
-    .titulo-site{
+  .btn-mob {
+    display: flex;
+  }
+  body {
+    padding-top: 3.9%;
+  }
+  .flex {
+    padding: 150px 6%;
+    flex-direction: column;
+  }
+  .barra-topo-site {
+    width: 100%;
+    height: 7%;
+    padding: 0 2%;
+  }
+  #logo-site {
+    position: relative;
+    top: 0.6vw;
+    width: 85%;
+    max-width: 70px;
+    max-height: 60px;
+  }
+  .titulo-site {
     font-size: 22px;
-
-    }
-    .conteudo-texto-topo h1{
-        font-size: 23px;   
-    }
-    .img-topo-site{
-        width: 100%; 
-        max-width: 400px;
-        max-height: 400px;
-    }
-    header nav ul{
-        display: none;
-    }
-    .conteudo-calculadora{
-        width: 90%;
-        height: 55vw;
-        max-height: 580px;
-        border: solid;
-    }
-    #calculadora{
-        width: 100%;
-        height: 45vh;
-        max-width: 400px;
-        max-height: 480px;
-        gap: 0.7vw;
-    }
-    #calculadora button{
+  }
+  .conteudo-texto-topo h1 {
+    font-size: 23px;
+  }
+  .img-topo-site {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  header nav ul {
+    display: none;
+  }
+  .conteudo-calculadora {
+    width: 90%;
+    height: 55vw;
+    max-height: 580px;
+    border: solid;
+  }
+  #calculadora {
+    width: 100%;
+    height: 45vh;
+    max-width: 400px;
+    max-height: 480px;
+    gap: 0.7vw;
+  }
+  #calculadora button {
     height: 10%;
     width: 80%;
-}
-.resultado{
+  }
+  .resultado {
     width: 100%;
     height: 45vh;
     max-height: 419px;
     border-left: solid rgb(214, 214, 214);
     flex-direction: column;
-}
-#imc{
+  }
+  #imc {
     font-size: 23px;
-}
-#status-peso{
+  }
+  #status-peso {
     font-size: 17px;
     padding-left: 5%;
     margin-right: auto;
-}
-#text-resultado{
+  }
+  #text-resultado {
     font-size: 12.88px;
-   
+  }
 }
-
-}
-.conteudo-inferior .flex{
-    padding: 90px 4%;
+.conteudo-inferior .flex {
+  padding: 90px 4%;
 }
 
 /* RESPONSIVIDADE CELULARES */
-@media screen and (max-width: 699px){
-    body{
-        padding-top: 26px;
-        padding-bottom: 500px;
-    } 
-    .btn-mob{
-        display: flex;
-    }
-    .interface .flex{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 80px 8%;
-        gap: 90px;
-    
-    }
-    .barra-topo-site{
-        width: 100%;
-        height: 70px;
-        padding-top: 20px;
-    }
-    #logo-site{
-        position: relative;
-        top: 0.6vw;
-        height: 11vw; 
-        max-height: 58px;
-
-     } 
-    .titulo-site{
-        font-size: 20px;
-
-    }
-    .conteudo-texto-topo h1{
-        font-size: 20px; 
-    }
-    .img-topo-site{
-        width: 100%; 
-        max-width: 300px;
-        max-height: 300px;
-    }
-    header nav ul{
-        display: none;
-    }
-    .conteudo-calculadora{
-        justify-content: start;
-        gap: 10px;
-        width: 85%;
-        height: 100%;
-        max-height: none;
-        flex-direction: column;
-        min-height: 430px;
-    }
-    .titulo-calculadora h1{
-        font-size: 20px;
-    }
-    #calculadora{
-        width: 100%;
-        height: 100%;
-        gap: 20px;
-        max-height: 580px;
-    }
-    #calculadora button{
+@media screen and (max-width: 699px) {
+  body {
+    padding-top: 26px
+  }
+  .btn-mob {
+    display: flex;
+  }
+  .menu-desktop {
+    display: none;
+  }
+  #menu-mobile.abrir {
+    visibility: visible;
+    transition: 0.2s;
+  }
+  .interface .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 8%;
+    gap: 90px;
+  }
+  .barra-topo-site {
+    width: 100%;
+    height: 70px;
+    padding-top: 20px;
+  }
+  #logo-site {
+    position: relative;
+    top: 0.6vw;
+    height: 11vw;
+    max-height: 58px;
+  }
+  .titulo-site {
+    font-size: 20px;
+  }
+  .conteudo-texto-topo h1 {
+    font-size: 20px;
+  }
+  .img-topo-site {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  header nav ul {
+    display: none;
+  }
+  .conteudo-calculadora {
+    justify-content: start;
+    gap: 10px;
+    width: 85%;
+    height: 100%;
+    max-height: none;
+    flex-direction: column;
+    min-height: 430px;
+  }
+  .titulo-calculadora h1 {
+    font-size: 20px;
+  }
+  #calculadora {
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    max-height: 580px;
+  }
+  #calculadora button {
     position: relative;
     min-height: 38px;
     top: 5%;
-}
-.escolha-genero{
+  }
+  .escolha-genero {
     width: 250px;
     display: flex;
     position: relative;
@@ -513,46 +502,46 @@ strong{
     right: 3%;
     justify-content: center;
     justify-content: space-around;
-}
-.resultado{
+  }
+  .resultado {
     width: 100%;
     height: 100%;
     align-items: start;
     gap: 15px;
-}
-.sumir{
+  }
+  .sumir {
     display: none;
-}
-.texto-resultado{
+  }
+  .texto-resultado {
     padding: 4%;
-    display: flex;    
-}
-#imc{
+    display: flex;
+  }
+  #imc {
     margin: auto;
     font-size: 23px;
-}
-.status{
+  }
+  .status {
     display: flex;
     justify-content: center;
     padding-left: 7%;
-}
-#status-peso{
+  }
+  #status-peso {
     top: 0;
     font-size: 20px;
     margin-right: auto;
-}
-#text-resultado{
-    font-size: 12.88px;  
-}
-.titulo-resultado{
+  }
+  #text-resultado {
+    font-size: 12.88px;
+  }
+  .titulo-resultado {
     border-top: solid rgba(0, 0, 0, 0.486);
-}
+  }
 
-.conteudo-inferior h2{
+  .conteudo-inferior h2 {
     color: rgb(0, 153, 255);
     font-size: 20px;
-}
-.conteudo-inferior{
+  }
+  .conteudo-inferior {
     padding: 90px 4%;
-}
+  }
 }
