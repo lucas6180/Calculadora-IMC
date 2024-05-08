@@ -109,6 +109,7 @@ body.dark input {
   border: 0;
   background-image: url(/assets/sol.png);
   background-size: cover;
+  cursor: pointer;
 }
 .img-lua {
   width: 35px;
@@ -118,6 +119,7 @@ body.dark input {
   border: 0;
   background-image: url(/assets/lua.png);
   background-size: cover;
+  cursor: pointer;
 }
 
 header a {
@@ -345,6 +347,7 @@ strong {
   color: rgb(0, 153, 255);
 }
 .refazer {
+  visibility: 100%0;
 }
 /* RESPOSIVIDADE PARA TABLETS/IPADS */
 @media screen and (min-width: 700px) and (max-width: 1020px) {
