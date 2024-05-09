@@ -108,7 +108,7 @@ body.dark input {
   height: 30px;
   background: transparent;
   border: 0;
-  background-image: url(/assets/sol.png);
+  background-image: url(../assets/sol.png);
   background-size: cover;
   cursor: pointer;
 }
@@ -118,7 +118,7 @@ body.dark input {
   background: transparent;
   outline: 0;
   border: 0;
-  background-image: url(/assets/lua.png);
+  background-image: url(../assets/lua.png);
   background-size: cover;
   cursor: pointer;
 }
